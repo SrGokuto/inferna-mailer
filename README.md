@@ -1,5 +1,8 @@
 # InfernaMailer
 
+## This project is live at [mailer.inferna.dev](https://mailer.inferna.dev/) and [infernamailer.web.app](https://infernamailer.web.app/)
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
 
 ## Development server
