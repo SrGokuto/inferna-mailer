@@ -1,0 +1,178 @@
+
+body {
+    background-color: #24273a;
+    color: #cad3f5;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.emails-section,
+.send-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: #363a4f;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #5b6078;
+}
+
+h3 {
+    color: #b7bdf8;
+    font-weight: 500;
+}
+
+textarea,
+input[type="text"] {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid #5b6078;
+    background-color: #1e2030;
+    color: #cad3f5;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+textarea:focus,
+input:focus {
+    border-color: #8aadf4;
+    box-shadow: 0 0 0 2px rgba(138, 173, 244, 0.3);
+}
+
+::placeholder {
+    color: #8087a2;
+}
+
+input[type="file"] {
+    color: #b8c0e0;
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #8aadf4;
+    color: #181926;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #7dc4e4;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.file-btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #4CAF50;
+    color: #181926;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.file-btn:hover {
+    background-color: #45a049;
+}
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #1e2030;
+    border: 1px solid #5b6078;
+    border-radius: 8px;
+    font-size: 0.875rem;
+}
+
+.file-item span:first-child {
+    flex: 1;
+    color: #cad3f5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-item span:nth-child(2) {
+    color: #8087a2;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.file-item button {
+    all: unset;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+    color: #ed8796;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.file-item button:hover {
+    background-color: rgba(237, 135, 150, 0.15);
+}
+
+.file-item button:active {
+    transform: scale(0.95);
+}
+
+.status-message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1e2030;
+    color: #cad3f5;
+    border: 1px solid #5b6078;
+    border-radius: 8px;
+}
+
+button:disabled {
+    background-color: #6e738d;
+    color: #a5adcb;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emails-section,
+    .send-section {
+        width: 90%;
+    }
+}

@@ -1,5 +1,9 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# Environment files
+/src/environment/environment.ts
+/src/environment/environment.prod.ts
+
 # Compiled output
 /dist
 /tmp
@@ -22,6 +26,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
+/.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -41,3 +46,7 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+/firebase-debug.log
+/.firebase/

@@ -1,0 +1,23 @@
+<header>
+  <h1>Inferna Mailer</h1>
+  @if (user$ | async; as user) {<div class="user-details">
+      <img
+        [src]="user.photoURL"
+        alt=""
+        width="80"
+        height="80"
+        style="border-radius: 50%"
+        referrerpolicy="no-referrer"
+      />
+      <div>
+        <p>{{ user.name }}</p>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+
+    <button (click)="logout()">{{ lang.logoutButton }}</button>
+  } @else {
+    <button (click)="login()">{{ lang.loginButton }}</button>
+  }
+  <button (click)="toggleLang()">{{ lang.langButton }}</button>
+</header>

@@ -1,0 +1,44 @@
+<main>
+  <div class="emails-section">
+    <h3>{{ lang.emailsTextarea }}</h3>
+    <textarea
+      #emailsInput
+      placeholder="mail1@gmail.com&#10;mail2@gmail.com"
+      class="message-input"
+      rows="5"
+    ></textarea>
+    <input #subjectInput type="text" placeholder="{{ lang.subject }}" />
+    <input #senderInput type="text" placeholder="{{ lang.sender }}" />
+
+    <textarea #messageInput placeholder="{{ lang.message }}" rows="4"></textarea>
+    <input type="file" #fileInput id="fileInput" multiple hidden (change)="onFilesSelect()" />
+
+    <label for="fileInput" class="file-btn"> {{ lang.attachFiles }} </label>
+    @if (selectedFiles.length > 0) {
+      <div class="files-list">
+        @for (file of selectedFiles; track $index) {
+          <div class="file-item">
+            <span>{{ file.name }}</span>
+            <span>({{ (file.size / 1024).toFixed(1) }} KB)</span>
+
+            <button (click)="removeFile($index)">❌</button>
+          </div>
+        }
+      </div>
+    }
+  </div>
+  <div class="send-section">
+    <h3>{{ lang.sendEmailsInfo }}</h3>
+    @if (user$ | async; as user) {
+      <button (click)="sendEmails()">{{ lang.sendEmailsButton }}</button>
+    } @else {
+      <button (click)="sendEmails()" disabled>{{ lang.sendEmailsButton }}</button>
+    }
+    
+
+    @if (statusMessage) {
+      <h2 class="status-message" [innerHTML]="statusMessage">
+      </h2>
+    }
+  </div>
+</main>

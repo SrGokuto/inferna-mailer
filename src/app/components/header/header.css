@@ -1,0 +1,91 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e2030;
+    border-bottom: 1px solid #5b6078;
+}
+
+
+header h1 {
+    color: #c6a0f6;
+    font-weight: 600;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #363a4f;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #5b6078;
+}
+
+
+.user-details img {
+    border-radius: 50%;
+    border: 2px solid #8aadf4;
+}
+
+.user-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.user-details p:first-child {
+    color: #cad3f5;
+    font-weight: 500;
+}
+
+.user-details p:last-child {
+    color: #a5adcb;
+    font-size: 0.85rem;
+}
+
+header button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #5b6078;
+    background-color: #494d64;
+    color: #cad3f5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+header button:hover {
+    background-color: #5b6078;
+}
+
+.btn-logout {
+    background-color: #ed8796;
+    color: #181926;
+    border: none;
+}
+
+.btn-logout:hover {
+    background-color: #ee99a0;
+}
+
+.btn-login {
+    background-color: #a6da95;
+    color: #181926;
+    border: none;
+}
+
+.btn-login:hover {
+    filter: brightness(0.95);
+}
+
+.btn-lang {
+    background-color: #8aadf4;
+    color: #181926;
+    border: none;
+}
+
+.btn-lang:hover {
+    background-color: #7dc4e4;
+}
